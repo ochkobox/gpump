@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+.intermediate{
+  height: auto;
+  width: 90%;
+  margin: 20px auto;
+  padding-bottom: 20px;
+
+  display: grid;
+  gap: 20px;
+  grid-template-rows: 250px 250px 250px 250px;
+
+}
+.text-name1, .text-name2, .text-name3, .text-name4{
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 135.02%;
+  color: #000000;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  align-content: flex-start;
+  text-decoration: none;
+  border: none;
+
+}
+
+a:-webkit-any-link {
+  color: -webkit-link;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .intermediate{
+    height: auto;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 220px 220px;
+  }
+  
+  .intermediate .box1{
+    grid-column: 1/8;
+  }
+
+  .intermediate .box2{
+    grid-column: 8/13;
+  }
+
+  .intermediate .box3{
+    grid-column: 1/6;
+  }
+
+  .intermediate .box4{
+    grid-column: 6/13;
+  }
+
+  .text-name1, .text-name2, .text-name3, .text-name4{
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 135.02%;
+    color: #000000;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    align-content: flex-start;
+    text-decoration: none;
+  }
+
+}
+
+
+@media (min-width: 1080px) {
+  .intermediate{
+    height: auto;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 400px 400px;
+    max-width: 1280px;
+  }
+  
+  .intermediate .box1{
+    grid-column: 1/8;
+  }
+
+  .intermediate .box2{
+    grid-column: 8/13;
+  }
+
+  .intermediate .box3{
+    grid-column: 1/6;
+  }
+
+  .intermediate .box4{
+    grid-column: 6/13;
+  }
+  .text-name1, .text-name2, .text-name3, .text-name4{
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 135.02%;
+    color: #000000;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    align-content: flex-start;
+    text-decoration: none;
+  }
+
+}
+
+
+
+
+
+.box1, .box2, .box3, .box4 {
+  display: grid;
+  border-radius: 20px;
+  box-shadow: rgb(5, 5, 5) 0px 2px 8px 0px;
+  color:rgb(0, 0, 0);
+  text-shadow: 1px 1px 2px white, 0 0 1em white, 0 0 0.2em white;
+
+}
+.box1{
+  background-image: url("/src/Components/Images/videocards.png");
+  background-size: cover;
+  background-position: center;
+}
+
+
+.box2{
+  background-image: url("/src/Components/Images/asic.png");
+  background-size: cover;
+  background-position: center;
+}
+.box3{
+  background-image: url("/src/Components/Images/miners.png");
+  background-size: cover;
+  background-position: center;
+}
+.box4{
+  background-image: url("/src/Components/Images/mining farms.png");
+  background-size: cover;
+  background-position: center;
+}
+
+
+.hover-effect-btn-box {
+  position: relative;
+  width: 100%;
+}
+.overlaybox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+}
+
+.hover-effect-btn-box:hover .overlaybox {
+  display: block;
+  background: rgba(255, 255, 255, 0.781); /* Настройка цвета и прозрачности для блока с заголовком при наведении */
+  border-radius: 20px;
+  
+  transition: 350ms ease-in-out;
+}
+
+.hover-effect-btn-box:hover .text-name1 {
+  top: 10%; /* Отступ сверху при наведении */
+}
+.buttonmore {
+  position: absolute;
+  width: 100%;
+  left:0;
+  top: 45%; /* Отступ сверху */
+  text-align: center;
+  opacity: 0;
+  transition: 350ms ease-in-out;
+  text-shadow: none;
+}
+.buttonmore a {
+  text-align: center;
+  color: rgb(153, 44, 255); /* Цвет текста */
+  z-index: 1; 
+  font-size: 50px;
+  font-weight: 700;
+}
+.hover-effect-btn-box:hover .buttonmore {
+  opacity: 1;
+}

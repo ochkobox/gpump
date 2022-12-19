@@ -1,0 +1,11 @@
+html, body, .div {
+  margin: 0;
+  height: 100% !important;
+}
+.fill-height {
+  min-height: 100%;
+  height:auto !important; /* cross-browser */
+  height: 100% !important; /* cross-browser */
+}
+
+#root > [data-reactroot] { height: 100% }

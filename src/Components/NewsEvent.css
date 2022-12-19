@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+.Newsintermediate{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+  width: 90%;
+  margin: 20px auto;
+  margin-bottom: 100px;
+}
+.Newsbox1, .Newsbox2, .Newsbox3{
+  
+  border-radius: 20px;
+  box-shadow: rgb(5, 5, 5) 0px 2px 8px 0px;
+  color:rgb(0, 0, 0);
+  text-align: center;
+  padding: 10px;
+  align-items: stretch;
+    justify-content: space-between;
+    display: flex;
+    align-content: stretch;
+    flex-direction: column;
+
+
+}
+
+
+.Newsintermediate img{
+  width: 100%;
+  height: 300px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+
+.Newsinfo{
+  width: 300px;
+  padding: 10px;
+  color: black;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+@media (min-width: 768px) {
+  .Newsintermediate{
+    height: auto;
+   
+  }
+  .Newsintermediate img{
+    width: 100%;
+    height: 300px;
+    border-radius: 20px;
+    object-fit: cover;
+  }
+ 
+
+}
+
+@media (min-width: 1080px) {
+  .Newsintermediate{
+    height: auto;
+    width: 75%;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .Newsintermediate img{
+    width: 100%;
+    height: 300px;
+    border-radius: 20px;
+    object-fit: cover;
+  }
+
+}
+
+
+@media (min-width: 1920px) {
+  .Newsintermediate{
+    height: auto;
+    width: 60%;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .Newsintermediate img{
+    width: 100%;
+    height: 300px;
+    border-radius: 20px;
+    object-fit: cover;
+  }
+
+}
+

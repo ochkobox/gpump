@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+.FooterCopy{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #D9D9D9
+    ;
+    margin-bottom: 0px;
+    max-height: 70px;
+    
+  }
+
+.footer {
+    width: 100%;
+    padding-top: 2rem;
+    background-color: #ECECEC;
+}
+
+.footer .container {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1.2rem;
+    padding-bottom: 30px;
+}
+
+.footer .col {
+    margin: auto;
+}
+
+.footer h3 {
+    margin: .8rem 0;
+    padding-left: 0px;
+    font-size: 20px;
+}
+
+.footer p {
+    margin: .4rem 0;
+}
+
+.footer .social {
+    text-align: center;
+}
+
+.footer .icon {
+    font-size: 2rem;
+    margin: 2rem 3rem;
+    color: #5651e5;
+}
+
+@media screen and (max-width: 940px) {
+    .footer .container {
+        grid-template-columns: repeat(2,1fr);
+        gap: .5rem;
+    }
+
+    .footer .icon {
+        margin: 1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer .container {
+        grid-template-columns: repeat(2,1fr);
+        gap: .5rem;
+    }
+
+    .footer h3 {
+        font-size: 18px;
+    } 
+    .FooterRow{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-direction: column;
+    }
+}
+
+.FooterRow{
+    display: flow-root;
+    align-items: flex-end;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 0px;
+
+}
+
+.FooterPay{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    flex-direction: row;
+}
+
+.FooterCoin{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.FooterCoin p{
+   padding-left: 5px;
+}
+
+.bitcoin{
+    color: #f2a900;
+    width: 30px;
+    height: 30px;
+}
+
+
+.litecoin{
+    color: #00aeff;
+    width: 30px;
+    height: 30px;
+}
