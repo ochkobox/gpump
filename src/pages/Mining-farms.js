@@ -1,12 +1,33 @@
+import React from "react";
+import Product from "../Components/Product";
+import './Videocards.css';
 
 
-const MiningFarms = () => {
 
-    return (
-      <div>
-       
-    <h1>Mining Farms</h1>
-    </div>
-  )};
+
+function MiningFarms(props) {
+  const{cartItems, products, onAdd, onRemove}= props;
+ 
   
+  return (
+    <div>
+
+      <div className="productGrid">
+      {products && products
+      .filter(product => product.category === 'MINING FARMS')
+      .map((product) => (
+        <Product 
+            onAdd={onAdd} 
+            onRemove={onRemove} 
+            item={cartItems.find((x) => x._id === product._id)} 
+            key={product._id} 
+            product={product}>
+            </Product>
+      ))
+      }
+      </div>
+    </div>
+  )
+}
+
 export default MiningFarms;

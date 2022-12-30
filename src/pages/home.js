@@ -14,7 +14,7 @@ const Homepage = () => {
     return (
       <div>
         
-    <h1>Homepage</h1>
+    
     <Carousel images={data} />
       
       <h2 class="block-title">

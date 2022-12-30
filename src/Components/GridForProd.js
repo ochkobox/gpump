@@ -13,7 +13,7 @@ function GridForProd() {
           
         <div class="box1" >
          <div class="hover-effect-btn-box">
-         <a href='http://www.google.com'>
+         <a className='boxLink' href='/videocards'>
            <div class="text-name1">{t("C_Videocards")}</div>
            <div class="overlaybox"></div>
            <div class="buttonmore"><a>{t("More_d")}</a></div>
@@ -22,7 +22,7 @@ function GridForProd() {
         </div>
         <div class="box2">
           <div class="hover-effect-btn-box">
-          <a href='http://www.google.com'>
+          <a className='boxLink' href='/asic'>
            <div class="text-name1">ASIC</div>
            <div class="overlaybox"></div>
            <div class="buttonmore"><a>{t("More_d")}</a></div>
@@ -31,7 +31,7 @@ function GridForProd() {
         </div>
         <div class="box3">
            <div class="hover-effect-btn-box">
-            <a href='http://www.google.com'>
+            <a className='boxLink' href='/ant-miner'>
              <div class="text-name1">ANT MINER</div>
              <div class="overlaybox"></div>
              <div class="buttonmore"><a>{t("More_d")}</a></div>
@@ -40,7 +40,7 @@ function GridForProd() {
         </div>
         <div class="box4">
         <div class="hover-effect-btn-box">
-           <a href='http://www.google.com'>
+           <a className='boxLink' href='/mining-farms'>
              <div class="text-name1">{t("C_MiningFarms")}</div>
              <div class="overlaybox"></div>
              <div class="buttonmore"><a>{t("More_d")}</a></div>

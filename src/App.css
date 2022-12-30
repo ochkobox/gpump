@@ -4,6 +4,28 @@
 .App {
   text-align: center;
   background: white;
+  height: 100%;
+}
+
+.allApp{
+  width: auto;
+ 
+  position: relative;
+  margin: 0;
+  color: #fff;
+  min-height: 100%;
+}
+
+.contentApp{
+  min-height: calc(70vh - 30px - 18px);
+}
+
+.contentApp::after{
+  content: '\00a0';
+  display: block;
+  margin-top: var(--space);
+  height: 0;
+  visibility: hidden;
 }
 
 .App-logo {

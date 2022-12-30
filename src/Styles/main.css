@@ -9,12 +9,7 @@
 	
 }
 
-:root {
-	--mainColor: #29335c;
-	--mainColorLight: #5767aa;
-	--secondaryColor: #db2b39;
-	--textColor: #eee;
-}
+
 
 header {
 	display: flex;
@@ -87,6 +82,14 @@ h3 {
 	color: black;
 }
 
+.navName{
+	color: #000;
+}
+
+.navName:focus{
+	color:  rgb(153, 44, 255);
+}
+
 @media only screen and (max-width: 1024px) {
 	header .nav-btn {
 		visibility: visible;
@@ -114,7 +117,7 @@ h3 {
 	header {
 		justify-content: space-between;
 		margin-left: auto;
-    margin-right: auto;
+        margin-right: auto;
 	}
 
 	header .responsive_nav {
@@ -299,10 +302,7 @@ h3 {
 	align-content: center;
 }
 
-.col-1Name{
-	padding: 5px;
-	float: left;
-}
+
 
 .checkout{
 	background: #f2a900;
@@ -322,6 +322,7 @@ h3 {
     justify-content: center;
     display: flex;
 	font-size: 16px;
+	color: #000;
 }
 
 .checkoutIcon{
@@ -341,6 +342,21 @@ h3 {
 
 .col-1Text{
 	float: right;
+    width: 17%;
+	margin-right: auto;
+	display: flex;
+    justify-content: flex-end;
+}
+
+.col-1Name{
+	padding: 5px;
+	float: left;
+	width: 70%;
+	font-weight: 700;
+}
+
+.col-1Qty{
+	width: 13%;
 }
 
 .h2Basket{

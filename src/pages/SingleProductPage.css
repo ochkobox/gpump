@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.sPage{
+    width: 70%;
+    display: flex;
+    margin: auto;
+    margin-top: 50px;
+    
+    font-family: "Montserrat";
+}
+
+
+.spImgBlock{
+    width: 50%;
+}
+
+.spImg{
+    width: 100%;
+    margin: auto;
+    float: left;
+    display: flex;
+    padding: 20px;
+    border-radius: 60px;
+    object-fit: contain;
+}
+
+.spTwoBlock{
+    width: 50%;
+    padding: 20px;
+    margin-top: 0px;
+}
+
+.spName{
+    font-size: 45px;
+    margin-left: 30px;
+}
+
+.spDesc{
+    font-size: 24px;
+    margin-left: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.spPrice{
+    font-size: 35px;
+    margin-left: 30px;
+    font-weight: 700;
+    
+    
+}
+
+.spRow{
+    font-size: 25px;
+    margin-left: 30px;
+}
+
+.spAdd{
+    background-color: #efeeee;
+    width: 2rem;
+    border-radius: 50%;
+    border: none;
+    margin: 0px 5px 0px 5px;
+    height: 2rem;
+    box-shadow: rgb(0 0 0 / 6%) 0px 2px 4px 0px inset;
+}
+
+.spRemove{
+    background-color: #efeeee;
+    width: 2rem;
+    border-radius: 50%;
+    border: none;
+    margin: 0px 5px 0px 5px;
+    height: 2rem;
+    box-shadow: rgb(0 0 0 / 6%) 0px 2px 4px 0px inset;
+}
+
+.spIcon{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.spQty{
+    font-size: 30px;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+
+.SPadd-to-cart{
+    right: 20px;
+    bottom: 20px;
+    background: rgba(253, 203, 37, 0.87);
+    width: 90%;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 500ms ease;
+    border: none;
+    justify-content: center;
+    display: flex;
+    font-size: 22px;
+}
+
+.SPadd-to-cart:hover{
+    transform: scale(1.05);
+    box-shadow:  7px 7px 14px #d6d6d6,
+             -7px -7px 14px #ffffff;
+}

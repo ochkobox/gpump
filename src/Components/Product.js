@@ -1,24 +1,23 @@
 import './Product.css';
 import { TiPlus, TiMinus } from "react-icons/ti";
-
+import { Link } from 'react-router-dom';
 
 function Product (props) {
   const {item, product, onAdd, onRemove} = props;
     return (
-      <div className='items'>
-        <img src={"./Imgs/" + product.img} alt={product.product_name}/>
-        <h2>{product.product_name}</h2>
-        <b>{product.price_btc} BTC</b>
-        <b>{product.price_ltc} LTC</b>
-        <b>{product.price_usd} $</b>
+      <div className='items' key={product._id}>
+        <img className='itemsImg' src={product.img_url} alt={product.name}/>
+        <h2 className='itemsName'>{product.name}</h2>
+        <b>{product.price} $</b>
         {item ?
-          <div>
-           <button onClick={() => onRemove(item)} className="remove"> <TiMinus/> </button>
+          <div className='buttonAR'>
+           <button onClick={() => onRemove(item)} className="remove"> <TiMinus className='iconBasket'/> </button>
            <span className='p-1'>{item.qty}</span>
-           <button onClick={() => onAdd(item)} className="add"> <TiPlus/> </button>
+           <button onClick={() => onAdd(item)} className="add"> <TiPlus className='iconBasket'/> </button>
           </div> : 
           <button className='add-to-cart' onClick={() => onAdd(product)}>ADD TO CART</button>
          }
+         <Link className='itemsMore' to={`/product/${product._id}`}> More info</Link>
         
         
       </div>

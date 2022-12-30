@@ -28,8 +28,12 @@
 
 }
 
-a:-webkit-any-link {
+.boxLink:-webkit-any-link {
   color: -webkit-link;
+  cursor: pointer;
+  text-decoration: none;
+}
+a:-webkit-any-link {
   cursor: pointer;
   text-decoration: none;
 }

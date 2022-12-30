@@ -1,33 +1,31 @@
 import "../Styles/main.css";
 import { IoBagCheckOutline } from "react-icons/io5";
 import { TiPlus, TiMinus } from "react-icons/ti";
+import { Link } from 'react-router-dom';
 
 function Basket(props) {
     const{cartItems, onAdd, onRemove}= props;
-    const itemPriceUsd = cartItems.reduce((price, item) => price + item.qty * item.price_usd, 0);
+    const itemPriceUsd = cartItems.reduce((price, item) => price + item.qty * item.price, 0);
     const totalPriceUsd = itemPriceUsd ;
-    const itemPriceBtc = cartItems.reduce((price, item) => price + item.qty * item.price_btc, 0);
-    const totalPriceBtc = itemPriceBtc ;
-    const itemPriceLtc = cartItems.reduce((price, item) => price + item.qty * item.price_ltc, 0);
-    const totalPriceLtc = itemPriceLtc ;
+
     return (
       <div className="basket">
        <h2 className="h2Basket">Cart Items</h2>
        {cartItems.length === 0 && <div className="cartEmpty"> No items are added. </div>}
        {cartItems.map((item) => (
         <div key={item._id} className="basketRow">
-            <div className="col-1Name">{item.product_name}</div>
-            <div className="col-1">
+            <div className="col-1Name">{item.name}</div>
+            <div className="col-1Qty">
                 <button onClick={() => onRemove(item)} className="remove"> 
-                  <TiMinus/>
+                  <TiMinus className='iconBasket'/>
                 </button>
                 {item.qty} 
                 <button onClick={() => onAdd(item)} className="add"> 
-                  <TiPlus/> 
+                  <TiPlus className='iconBasket'/> 
                 </button>
             </div>
             <div className="col-1Text">
-              $ {item.price_usd.toFixed(2)}  BTC {item.price_btc.toFixed(4)} LTC {item.price_ltc.toFixed(2)}
+              $ {item.price.toFixed(2)}
             </div>
         </div>
        ))}
@@ -37,8 +35,6 @@ function Basket(props) {
         <div className="row">
          <div className="totalCol-1">Total Price</div>
          <div className="totalCol-2">$ {totalPriceUsd.toFixed(2)}</div>
-         <div className="totalCol-2">BTC {totalPriceBtc.toFixed(4)}</div>
-         <div className="totalCol-2">LTC {totalPriceLtc.toFixed(2)}</div>
         </div>
         <div className="row">
          <div className="totalCol-1">Shipping Price</div>
@@ -46,9 +42,9 @@ function Basket(props) {
         </div>
        
         <div>
-        <button className="checkout" onClick={() => alert('Implement CHECKOUT!')}>
+        <Link className="checkout"  to="/checkout">
             Checkout <IoBagCheckOutline className="checkoutIcon"/>
-        </button>    
+        </Link>    
         </div>
 
         </div>

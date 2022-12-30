@@ -12,6 +12,11 @@ import Basket from '../Components/Basket';
 
 function Navbar(props) {
 	const navRef = useRef();
+
+    const showNavbar = () => {
+		navRef.current.classList.toggle("responsive_nav");
+	}
+
 	const { t } = useTranslation();
     const {countCartItems,onAdd, onRemove, cartItems} = props;
 	let[cartOpen, setCartOpen] = useState(false);
@@ -24,17 +29,17 @@ function Navbar(props) {
 		    <Link to="/"><h3>MINERSTORE</h3></Link>
 			<div>
 			<nav ref={navRef}>
-				<Link to="/asic">ASIC</Link>
-				<Link to="/ant-miner">ANT MINER</Link>
-				<Link to="/videocards">{t("C_Videocards")}</Link>
-				<Link to="/mining-farms">{t("C_MiningFarms")}</Link>
+				<Link className="navName" to="/asic">ASIC</Link>
+				<Link className="navName" to="/ant-miner">ANT MINER</Link>
+				<Link className="navName" to="/videocards">{t("C_Videocards")}</Link>
+				<Link className="navName" to="/mining-farms">{t("C_MiningFarms")}</Link>
 				
-				<button className="nav-btn nav-close-btn">
+				<button className="nav-btn nav-close-btn" onClick={showNavbar}>
 					<FaTimes />
 				</button>
                 <LanguageSwitcher />
 			</nav>
-			<button className="nav-btn">
+			<button className="nav-btn" onClick={showNavbar}>
 				<FaBars />
 			</button>
 			<IoBagOutline className={`CartButton ${cartOpen && 'active'}`} onClick={() => setCartOpen(cartOpen = !cartOpen)}/>

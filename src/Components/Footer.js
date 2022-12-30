@@ -3,11 +3,15 @@ import "./Footer.css";
 import { SiLitecoin, SiBitcoin } from "react-icons/si";
 import { useTranslation } from "react-i18next";
 import "../i18n";
+import { Link } from 'react-router-dom';
 
 
 
 function Footer() {
   const { t } = useTranslation();
+  const scrollToTop = () => {
+    window.scrollTo(0, 0)
+}
 
   return (
       <div className='footer'>
@@ -28,10 +32,10 @@ function Footer() {
                 </div>
                 <div className='col'>
                     <h3>{t("prodUS")}</h3>
-                    <p>{t("C_Videocards")}</p>
-                    <p>ASIC</p>
-                    <p>ANT MINER</p>
-                    <p>{t("C_MiningFarms")}</p>
+                    <Link onClick={scrollToTop} to="/videocards"><p>{t("C_Videocards")}</p></Link>
+                    <Link onClick={scrollToTop} to="/asic"><p>ASIC</p></Link>
+                    <Link onClick={scrollToTop} to="/ant-miner"><p>ANT MINER</p></Link>
+                    <Link onClick={scrollToTop} to="/mining-farms"><p>{t("C_MiningFarms")}</p></Link>
                 </div>
                 <div className='col'>
                     <h3>{t("Payment_M")}</h3>
